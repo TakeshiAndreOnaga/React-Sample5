@@ -1,5 +1,5 @@
 export const Footer = () => {
 	return (
-		<div>フッター</div>
+		<div style={{marginTop: "20px"}}>©️ Densetsu.</div>
 	)
 }
