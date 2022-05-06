@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import { Footer } from "./components/organisms/Footer";
 import { HeaderLayout } from "./components/templates/HeaderLayout";
@@ -8,14 +8,15 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Switch>
+        <HeaderLayout>
+        <Routes>
           {routes.map( route => (
-            <Route key={route.path} exact path={route.path}>
-              <HeaderLayout>{route.children}</HeaderLayout>
-              <Footer />
+            <Route key={route.path} path={route.path} element={route.children}>
             </Route>
           ))}
-        </Switch>
+        </Routes>
+        </HeaderLayout>
+        <Footer />
       </BrowserRouter>
     </>
   );
