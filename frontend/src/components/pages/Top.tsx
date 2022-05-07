@@ -1,5 +1,5 @@
 export const Top = () => {
 	return (
-		<div>トップページ</div>
+		<h3>トップページ</h3>
 	)
 }
